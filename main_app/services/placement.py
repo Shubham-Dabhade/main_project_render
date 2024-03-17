@@ -2,9 +2,9 @@ import pandas as pd
 import numpy as np
 
 def find_prediction():
-    dataset_21_22 = pd.read_csv("../main_project/csv/predicted_21-22.csv")
-    dataset_22_23 = pd.read_csv("../main_project/csv/predicted_22-23.csv")
-    dataset_23_24 = pd.read_csv("../main_project/csv/predicted_23-24.csv")
+    dataset_21_22 = pd.read_csv("predicted_21-22.csv")
+    dataset_22_23 = pd.read_csv("predicted_22-23.csv")
+    dataset_23_24 = pd.read_csv("predicted_23-24.csv")
 
 
     actual_21_22 = dataset_21_22.iloc[:,-2].values
