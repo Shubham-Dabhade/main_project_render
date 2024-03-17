@@ -1,8 +1,9 @@
 import pandas as pd
 import numpy as np
+import csv
 
 def score(input_id,sem_name):
-    dataset_23_24 = pd.read_csv("predicted_23-24.csv")
+    dataset_23_24 = pd.read_csv("main_app/services/predicted_23-24.csv")
 
     output_dic = dict()
     sem_name = sem_name.upper()

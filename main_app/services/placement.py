@@ -1,10 +1,26 @@
 import pandas as pd
 import numpy as np
+import csv
+import os
 
 def find_prediction():
-    dataset_21_22 = pd.read_csv("predicted_21-22.csv")
-    dataset_22_23 = pd.read_csv("predicted_22-23.csv")
-    dataset_23_24 = pd.read_csv("predicted_23-24.csv")
+    # get current working directory
+    cwd = os.getcwd()
+
+    # get files in directory
+    files = os.listdir(cwd)
+
+    print(files)
+    # with open('predicted_21-22.csv', 'r') as csvfile1:
+    #     dataset_21_22 = csv.reader(csvfile1)
+    # with open('main_app/services/predicted_22-23.csv', 'r') as csvfile2:
+    #     dataset_22_23 = csv.reader(csvfile2)
+    # with open('main_app/services/predicted_23-24.csv', 'r') as csvfile3:
+    #     dataset_23_24 = csv.reader(csvfile3)
+
+    dataset_21_22 = pd.read_csv("main_app/services/predicted_21-22.csv")
+    dataset_22_23 = pd.read_csv("main_app/services/predicted_22-23.csv")
+    dataset_23_24 = pd.read_csv("main_app/services/predicted_23-24.csv")
 
 
     actual_21_22 = dataset_21_22.iloc[:,-2].values
